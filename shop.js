@@ -11,11 +11,11 @@ function j_menu() {
     // 循环组册鼠标事件
     for (var i = 0; i < nav.length; i++) {
         nav[i].onmouseover = function () {
-            var J_menu = document.querySelector('.J_navMenu');
+            var J_menu = document.querySelector('.header_nav_menu');
             J_menu.style.display = 'block';
         }
         nav[i].onmouseout = function () {
-            var J_menu = document.querySelector('.J_navMenu');
+            var J_menu = document.querySelector('.header_nav_menu');
             J_menu.style.display = 'none';
         }
     }

@@ -33,15 +33,24 @@
             height: 120px;
             width: 100%;
             background-color: grey;
+            display: none;
         }
 
         .site_topbar {
             position: relative;
             height: 40px;
-            background-color: rgb(144, 134, 134);
+            background: #333;
             font-size: 12px;
         }
-
+        .site_topbar a {
+            color: #b0b0b0;
+            line-height: 40px;
+            display: inline-block;
+        }
+        .site_topbar .sep {
+            margin: 0 .3em;
+            color: #424242;
+        }
         .site_topbar .container {
             position: relative;
             margin: 0 auto;
@@ -51,7 +60,7 @@
             float: left;
             height: 40px;
             line-height: 40px;
-            background-color: #fff;
+            /* background-color: #fff; */
         }
 
         .site_topbar .container .topbar_cart {
@@ -63,7 +72,7 @@
             /* -webkit-transition: all .2s; */
             /* transition: all .2s; */
             font-size: 12px;
-            background-color: red;
+            background-color: #424242;
         }
 
         .site_topbar .container .topbar_info {
@@ -71,13 +80,13 @@
             float: right;
             height: 40px;
             line-height: 40px;
-            background-color: yellow;
+            /* background-color: yellow; */
         }
 
         .site_header {
             position: relative;
             height: 100px;
-            background-color: rgb(144, 200, 200);
+            background: #fff;
         }
 
         .site_header .container {
@@ -100,6 +109,8 @@
             height: 56px;
             overflow: hidden;
             background-color: #fff;
+            background: url(//cdn.cnbj1.fds.api.mi-img.com/mi.com-assets/shop/img/logo-mi2.png) no-repeat;
+            background-size: 56px;
         }
 
         .site_header .header_nav {
@@ -123,6 +134,7 @@
             float: left;
             width: 127px;
             padding-right: 15px;
+            visibility: hidden;
         }
 
         .site_header .header_nav .nav_list .nav_item {
@@ -141,6 +153,7 @@
             float: right;
             width: 296px;
             margin-top: 25px;
+            border: 1px solid #e0e0e0;
         }
 
         .site_header .header_search .search_form {
@@ -155,13 +168,40 @@
             color: #fd6821;
         }
 
-        .site_header .J_navMenu {
+        .site_header .header_nav_menu {
             position: absolute;
-            width: 1680px;
+            width: 1665px;
             height: 229px;
-            background-color: #fff;
-            z-index: 10;
+            background: #fff;
+            z-index: 24;
             border-top: 1px solid #e0e0e0;
+            overflow: hidden;
+        }
+        .site_header .header_nav_menu .figure_thumb {
+            width: 160px;
+            height: 110px;
+            margin: 0 auto 16px;
+            text-align: center;
+        }
+        .site_header .header_nav_menu .figure_thumb img{
+            width: 160px;
+            height: 110px;
+        }
+        .site_header .header_nav_menu .title {
+            color: #333;
+            line-height: 20px;
+        }
+        .site_header .header_nav_menu .price {
+            color: #ff6700;
+            line-height: 20px;
+        }
+        .site_header .header_nav_menu .children_list li{
+            position: relative;
+            float: left;
+            width: 179px;
+            padding: 35px 12px 0;
+            text-align: center;
+            font-size: 12px;
         }
 
         .hero {
@@ -507,7 +547,7 @@
             padding: 27px 0;
         }
 
-        .site_footer .footer_service>ul li {
+        .list_service li {
             list-style: none;
             float: left;
             height: 25px;
@@ -519,7 +559,7 @@
         }
 
         /* 清除列表中的第一项的左边框格式 */
-        .site_footer .footer_service>ul li:first-child{
+        .list_service li:first-child {
             border-left: 0;
         }
 
@@ -657,10 +697,11 @@
                 </div>
                 <div class="topbar_cart"></div>
                 <div class="topbar_info">
-                    <a href=""></a>
+                    <a href="">登录</a>
                     <span class="sep">|</span>
-                    <a href=""></a>
+                    <a href="">注册</a>
                     <span class="sep">|</span>
+                    <a href="">消息通知</a>
                 </div>
             </div>
         </div>
@@ -723,8 +764,67 @@
                     <form action="" class="search_form"></form>
                 </div>
             </div>
-            <!-- TODO: 暂时起名，下拉列表菜单 待研究-->
-            <div class="J_navMenu" style="display:none"></div>
+            <!-- TODO: 研究 slideUp & Down 滑动效果 -->
+            <div class="header_nav_menu" style="display:block">
+                <div class="container">
+                    <ul class="list_service children_list">
+                        <li>
+                            <a href="#">
+                                <div class="figure_thumb">
+                                    <img src="//cdn.cnbj1.fds.api.mi-img.com/mi-mall/11e28a0a7c6a2ca07f0dc2044d3858c2.png?thumb=1&w=320&h=220&f=webp&q=90" alt="">
+                                </div>
+                                <div class="title">Xiaomi 13 Pro</div>
+                                <p class="price">4999元起</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="figure_thumb">
+                                    <img src="//cdn.cnbj1.fds.api.mi-img.com/mi-mall/11e28a0a7c6a2ca07f0dc2044d3858c2.png?thumb=1&w=320&h=220&f=webp&q=90" alt="">
+                                </div>
+                                <div class="title">Xiaomi 13 Pro</div>
+                                <p class="price">4999元起</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="figure_thumb">
+                                    <img src="//cdn.cnbj1.fds.api.mi-img.com/mi-mall/11e28a0a7c6a2ca07f0dc2044d3858c2.png?thumb=1&w=320&h=220&f=webp&q=90" alt="">
+                                </div>
+                                <div class="title">Xiaomi 13 Pro</div>
+                                <p class="price">4999元起</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="figure_thumb">
+                                    <img src="//cdn.cnbj1.fds.api.mi-img.com/mi-mall/11e28a0a7c6a2ca07f0dc2044d3858c2.png?thumb=1&w=320&h=220&f=webp&q=90" alt="">
+                                </div>
+                                <div class="title">Xiaomi 13 Pro</div>
+                                <p class="price">4999元起</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="figure_thumb">
+                                    <img src="//cdn.cnbj1.fds.api.mi-img.com/mi-mall/11e28a0a7c6a2ca07f0dc2044d3858c2.png?thumb=1&w=320&h=220&f=webp&q=90" alt="">
+                                </div>
+                                <div class="title">Xiaomi 13 Pro</div>
+                                <p class="price">4999元起</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="figure_thumb">
+                                    <img src="//cdn.cnbj1.fds.api.mi-img.com/mi-mall/11e28a0a7c6a2ca07f0dc2044d3858c2.png?thumb=1&w=320&h=220&f=webp&q=90" alt="">
+                                </div>
+                                <div class="title">Xiaomi 13 Pro</div>
+                                <p class="price">4999元起</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
     <!-- 头部结束 -->
@@ -787,7 +887,7 @@
             </div>
             <div class="slide">
                 <!-- TODO: 幻灯片设计 -->
-                <div>幻灯片</div>
+                <div></div>
                 <div class="swiper_button_prev"></div>
                 <div class="swiper_button_next"></div>
             </div>
