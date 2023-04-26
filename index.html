@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>小米商城首页</title>
     <script src="./shop.js"></script>
-    
+    <link rel="stylesheet" href="assets/css/iconfont.css">
     <style>
         * {
             margin: 0;
@@ -65,6 +65,7 @@
         }
 
         .site_topbar .container .topbar_cart {
+            /* 父相 */
             position: relative;
             float: right;
             width: 120px;
@@ -75,7 +76,44 @@
             font-size: 12px;
             background-color: #424242;
         }
-
+        .topbar_cart .cart_mini {
+            position: relative;
+            z-index: 32;
+            display: block;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            color: #b0b0b0;
+            background: #424242;
+        }
+        .topbar_cart .cart_mini em {
+            margin-right: 4px;
+            font-size: 20px;
+            line-height: 20px;
+            vertical-align: -4px;
+        }
+        .topbar_cart .cart_mini:hover {
+            color: #fe905c;
+        }
+        .site_topbar .container .topbar_cart .cart_menu {
+            /* 子绝 */
+            position: absolute;
+            right: 0;
+            top: 40px;
+            z-index: 31;
+            width: 316px;
+            height: 0;
+            color: #424242;
+            background: #fff;
+            -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.15);
+            box-shadow: 0 2px 10px rgba(0,0,0,.15);
+            overflow: hidden;
+            -webkit-transition: height .3s;
+            transition: height .3s;
+        }
+        .site_topbar .container .topbar_cart .cart_menu .menu_content {
+            padding: 20px 0 0;
+        }
         .site_topbar .container .topbar_info {
             position: relative;
             float: right;
@@ -172,7 +210,7 @@
         .site_header .header_nav_menu {
             position: absolute;
             width: 1665px;
-            height: 229px;
+            /* height: 229px; */
             background: #fff;
             z-index: 24;
             border-top: 1px solid #e0e0e0;
@@ -290,18 +328,37 @@
         }
 
         .hero .sub_info .left_channel_list {
+            /* padding: 3px; */
+            font-size: 12px;
+            text-align: center;
             float: left;
             width: 234px;
             height: 170px;
-            background-color: rgb(28, 201, 201);
+            background-color: #5f5751;
         }
-
+        .hero .sub_info .left_channel_list a {
+            display: block;
+            padding-top: 18px;
+            text-overflow: ellipsis;
+            color: #fff;
+            opacity: .7;
+            -webkit-transition: opacity .2s;
+            transition: opacity .2s;
+        }
+        .hero .sub_info .left_channel_list img {
+            display: block;
+            width: 24px;
+            height: 24px;
+            margin: 0 auto 4px;
+        }
         .hero .sub_info .left_channel_list>ul li {
+            padding: 0 3px;
             list-style: none;
-            width: 76px;
-            height: 83px;
-            background-color: red;
-            border: 1px solid;
+            width: 70px;
+            height: 82px;
+            background-color: #5f5751;
+            /* TODO: 怎么实现原效果有一分割线，而不是采用边框 */
+            border: 1px solid #665e58;
             float: left;
         }
 
@@ -309,7 +366,7 @@
             float: right;
             width: 992px;
             height: 170px;
-            background-color: rgb(106, 146, 146);
+            background-color: #ffffff
         }
 
         .hero .sub_info .right_promoList>ul li {
@@ -696,7 +753,18 @@
                     <span class="sep">|</span>
                     <a href="#">Select Location</a>
                 </div>
-                <div class="topbar_cart"></div>
+                <div class="topbar_cart">
+                    <a href="" class="cart_mini" id="J_miniCartBtn">
+                        <em class="iconfont icon-gouwuche1"></em>
+                        购物车
+                        <span>(0)</span>
+                    </a>
+                    <div id="J_miniCartMenu" class="cart_menu" style="height: 0px;">
+                        <div class="menu_content">
+                            <span>购物车中还没有商品，赶紧选购吧！</span>
+                        </div>
+                    </div>
+                </div>
                 <div class="topbar_info">
                     <a href="">登录</a>
                     <span class="sep">|</span>
@@ -765,8 +833,8 @@
                     <form action="" class="search_form"></form>
                 </div>
             </div>
-            <!-- TODO: 研究 slideUp & Down 滑动效果 -->
-            <div class="header_nav_menu" style="display:block">
+            <!-- TODO: 研究 slideUp & Down 滑动效果 bug: 鼠标移动到元素下方时菜单不显示-->
+            <div class="header_nav_menu" style="height: 0px;">
                 <div class="container">
                     <ul class="list_service children_list">
                         <li>
@@ -896,29 +964,59 @@
         <div class="sub_info container">
             <div class="left_channel_list">
                 <ul>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
-                    <li>6</li>
+                    <li>
+                        <a href="">
+                            <img src="assets/img/icon/maintainance.png" alt="">
+                            保障服务
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="assets/img/icon/services.png" alt="">
+                            保障服务
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="assets/img/icon/fcode.png" alt="">
+                            保障服务
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="assets/img/icon/phonecard.png" alt="">
+                            米粉卡
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="assets/img/icon/cycle.png" alt="">
+                            保障服务
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="assets/img/icon/addfund.png" alt="">
+                            保障服务
+                        </a>
+                    </li>
                 </ul>
             </div>
             <div class="right_promoList">
                 <ul>
                     <li>
                         <a href="#">
-                            <img src="img/sub_commodity1.jpg" alt="test">
+                            <img src="assets/img/sub_commodity1.jpg" alt="test">
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="img/sub_commodity1.jpg" alt="test">
+                            <img src="assets/img/sub_commodity1.jpg" alt="test">
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="img/sub_commodity2.jpg" alt="test">
+                            <img src="assets/img/sub_commodity2.jpg" alt="test">
                         </a>
                     </li>
                 </ul>
@@ -930,7 +1028,7 @@
         <!-- 海报条 -->
         <div class="site_banner_box container">
             <a href="#">
-                <img src="img/box_banner1.webp" alt="test" width="1226" height="120">
+                <img src="assets/img/box_banner1.webp" alt="test" width="1226" height="120">
             </a>
         </div>
         <!-- 两个商品列表块 -->
@@ -946,7 +1044,7 @@
                     <ul>
                         <li>
                             <a href="#">
-                                <img width="" height="614" src="img/side_commodity1.jpg" alt="test">
+                                <img width="" height="614" src="assets/img/side_commodity1.jpg" alt="test">
                             </a>
                         </li>
                     </ul>
@@ -956,7 +1054,7 @@
                         <li>
                             <a href="#">
                                 <div class="figure">
-                                    <img width="160" height="160" src="img/commdity_list1.png" alt="test">
+                                    <img width="160" height="160" src="assets/img/commdity_list1.png" alt="test">
                                 </div>
                                 <h3 class="title">Redmi Note 11 5G</h3>
                                 <p class="desc">5000mAh大电量</p>
@@ -966,7 +1064,7 @@
                         <li>
                             <a href="#">
                                 <div class="figure">
-                                    <img width="160" height="160" src="img/commdity_list1.png" alt="test">
+                                    <img width="160" height="160" src="assets/img/commdity_list1.png" alt="test">
                                 </div>
                                 <h3 class="title">Redmi Note 11 5G</h3>
                                 <p class="desc">5000mAh大电量</p>
@@ -976,7 +1074,7 @@
                         <li>
                             <a href="#">
                                 <div class="figure">
-                                    <img width="160" height="160" src="img/commdity_list1.png" alt="test">
+                                    <img width="160" height="160" src="assets/img/commdity_list1.png" alt="test">
                                 </div>
                                 <h3 class="title">Redmi Note 11 5G</h3>
                                 <p class="desc">5000mAh大电量</p>
@@ -986,7 +1084,7 @@
                         <li>
                             <a href="#">
                                 <div class="figure">
-                                    <img width="160" height="160" src="img/commdity_list1.png" alt="test">
+                                    <img width="160" height="160" src="assets/img/commdity_list1.png" alt="test">
                                 </div>
                                 <h3 class="title">Redmi Note 11 5G</h3>
                                 <p class="desc">5000mAh大电量</p>
@@ -996,7 +1094,7 @@
                         <li>
                             <a href="#">
                                 <div class="figure">
-                                    <img width="160" height="160" src="img/commdity_list1.png" alt="test">
+                                    <img width="160" height="160" src="assets/img/commdity_list1.png" alt="test">
                                 </div>
                                 <h3 class="title">Redmi Note 11 5G</h3>
                                 <p class="desc">5000mAh大电量</p>
@@ -1006,7 +1104,7 @@
                         <li>
                             <a href="#">
                                 <div class="figure">
-                                    <img width="160" height="160" src="img/commdity_list1.png" alt="test">
+                                    <img width="160" height="160" src="assets/img/commdity_list1.png" alt="test">
                                 </div>
                                 <h3 class="title">Redmi Note 11 5G</h3>
                                 <p class="desc">5000mAh大电量</p>
@@ -1016,7 +1114,7 @@
                         <li>
                             <a href="#">
                                 <div class="figure">
-                                    <img width="160" height="160" src="img/commdity_list1.png" alt="test">
+                                    <img width="160" height="160" src="assets/img/commdity_list1.png" alt="test">
                                 </div>
                                 <h3 class="title">Redmi Note 11 5G</h3>
                                 <p class="desc">5000mAh大电量</p>
@@ -1026,7 +1124,7 @@
                         <li>
                             <a href="#">
                                 <div class="figure">
-                                    <img width="160" height="160" src="img/commdity_list1.png" alt="test">
+                                    <img width="160" height="160" src="assets/img/commdity_list1.png" alt="test">
                                 </div>
                                 <h3 class="title">Redmi Note 11 5G</h3>
                                 <p class="desc">5000mAh大电量</p>
@@ -1099,7 +1197,7 @@
                     <li>
                         <a href="#">
                             <div class="figure_img">
-                                <img width="296" height="180" src="img/video_list1.webp" alt="test">
+                                <img width="296" height="180" src="assets/img/video_list1.webp" alt="test">
                                 <span class="play"></span>
                             </div>
                             <h3 class="title">2021年春季新品发布会第一场</h3>
@@ -1109,7 +1207,7 @@
                     <li>
                         <a href="#">
                             <div class="figure_img">
-                                <img width="296" height="180" src="img/video_list1.webp" alt="test">
+                                <img width="296" height="180" src="assets/img/video_list1.webp" alt="test">
                                 <span class="play"></span>
                             </div>
                             <h3 class="title">2021年春季新品发布会第一场</h3>
@@ -1119,7 +1217,7 @@
                     <li>
                         <a href="#">
                             <div class="figure_img">
-                                <img width="296" height="180" src="img/video_list1.webp" alt="test">
+                                <img width="296" height="180" src="assets/img/video_list1.webp" alt="test">
                                 <span class="play"></span>
                             </div>
                             <h3 class="title">2021年春季新品发布会第一场</h3>
@@ -1129,7 +1227,7 @@
                     <li>
                         <a href="#">
                             <div class="figure_img">
-                                <img width="296" height="180" src="img/video_list1.webp" alt="test">
+                                <img width="296" height="180" src="assets/img/video_list1.webp" alt="test">
                                 <span class="play"></span>
                             </div>
                             <h3 class="title">2021年春季新品发布会第一场</h3>
