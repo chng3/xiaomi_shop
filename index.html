@@ -303,7 +303,10 @@
 
         .hero .hero_main .slide .swiper_button_prev,
         .hero .hero_main .slide .swiper_button_next {
-            /* background: url(); */
+            background: url("assets/img/arrow-left.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             background-color: #fff;
             position: absolute;
             top: 50%;
@@ -317,10 +320,24 @@
         }
 
         .hero .hero_main .slide .swiper_button_next {
+            background: url("assets/img/arrow-right.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             left: auto;
             right: 0;
         }
-
+        .hero .hero_main .slide .proceedimg {
+            background: url("assets/img/imgproceed-stat.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 89px;
+            height: 22px;
+            position: absolute;
+            right:20px;
+            bottom: 20px;
+        }
         .hero .sub_info {
             height: 170px;
             background-color: blue;
@@ -520,7 +537,7 @@
             float: left;
             height: 100%;
             width: 234px;
-            background-color: skyblue;
+            /* background-color: skyblue; */
         }
 
         .site_main .site_brick_box .box_bd .left>ul li {
@@ -956,9 +973,12 @@
             </div>
             <div class="slide">
                 <!-- TODO: 幻灯片设计 -->
-                <div></div>
+                <div>
+                    <img src="assets/img/big_promote_banner_gray.jpg" alt="" style="width:1226px">
+                </div>
                 <div class="swiper_button_prev"></div>
                 <div class="swiper_button_next"></div>
+                <div class="proceedimg"></div>
             </div>
         </div>
         <div class="sub_info container">
@@ -1137,49 +1157,213 @@
         </div>
         <div class="site_brick_box container">
             <div class="site_box_hd">
-                <h2>222</h2>
+                <h2 class="title">手机</h2>
                 <div class="more">
                     <a class="more_link" href="#">查看更多</a>
                 </div>
             </div>
             <div class="box_bd">
-                <div class="left"></div>
+                <div class="left">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img width="" height="614" src="assets/img/side_commodity1.jpg" alt="test">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
                 <div class="right">
                     <ul>
-                        <li>1</li>
-                        <li>2</li>
-                        <li>3</li>
-                        <li>4</li>
-                        <li>5</li>
-                        <li>6</li>
-                        <li>7</li>
-                        <li>8</li>
+                        <li>
+                            <a href="#">
+                                <div class="figure">
+                                    <img width="160" height="160" src="assets/img/commdity_list1.png" alt="test">
+                                </div>
+                                <h3 class="title">Redmi Note 11 5G</h3>
+                                <p class="desc">5000mAh大电量</p>
+                                <p class="price">1199元起</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="figure">
+                                    <img width="160" height="160" src="assets/img/commdity_list1.png" alt="test">
+                                </div>
+                                <h3 class="title">Redmi Note 11 5G</h3>
+                                <p class="desc">5000mAh大电量</p>
+                                <p class="price">1199元起</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="figure">
+                                    <img width="160" height="160" src="assets/img/commdity_list1.png" alt="test">
+                                </div>
+                                <h3 class="title">Redmi Note 11 5G</h3>
+                                <p class="desc">5000mAh大电量</p>
+                                <p class="price">1199元起</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="figure">
+                                    <img width="160" height="160" src="assets/img/commdity_list1.png" alt="test">
+                                </div>
+                                <h3 class="title">Redmi Note 11 5G</h3>
+                                <p class="desc">5000mAh大电量</p>
+                                <p class="price">1199元起</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="figure">
+                                    <img width="160" height="160" src="assets/img/commdity_list1.png" alt="test">
+                                </div>
+                                <h3 class="title">Redmi Note 11 5G</h3>
+                                <p class="desc">5000mAh大电量</p>
+                                <p class="price">1199元起</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="figure">
+                                    <img width="160" height="160" src="assets/img/commdity_list1.png" alt="test">
+                                </div>
+                                <h3 class="title">Redmi Note 11 5G</h3>
+                                <p class="desc">5000mAh大电量</p>
+                                <p class="price">1199元起</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="figure">
+                                    <img width="160" height="160" src="assets/img/commdity_list1.png" alt="test">
+                                </div>
+                                <h3 class="title">Redmi Note 11 5G</h3>
+                                <p class="desc">5000mAh大电量</p>
+                                <p class="price">1199元起</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="figure">
+                                    <img width="160" height="160" src="assets/img/commdity_list1.png" alt="test">
+                                </div>
+                                <h3 class="title">Redmi Note 11 5G</h3>
+                                <p class="desc">5000mAh大电量</p>
+                                <p class="price">1199元起</p>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
         <!-- 海报条 -->
-        <div class="site_banner_box container" style="margin-top: 22px;"></div>
+        <div class="site_banner_box container" style="margin-top: 22px;">
+            <a href="#">
+                <img src="assets/img/box_banner1.webp" alt="test" width="1226" height="120">
+            </a>
+        </div>
         <!-- 一个商品列表块 -->
         <div class="site_brick_box container">
             <div class="site_box_hd">
-                <h2>222</h2>
+                <h2 class="title">手机</h2>
                 <div class="more">
                     <a class="more_link" href="#">查看更多</a>
                 </div>
             </div>
             <div class="box_bd">
-                <div class="left"></div>
+                <div class="left">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img width="" height="614" src="assets/img/side_commodity1.jpg" alt="test">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
                 <div class="right">
                     <ul>
-                        <li>1</li>
-                        <li>2</li>
-                        <li>3</li>
-                        <li>4</li>
-                        <li>5</li>
-                        <li>6</li>
-                        <li>7</li>
-                        <li>8</li>
+                        <li>
+                            <a href="#">
+                                <div class="figure">
+                                    <img width="160" height="160" src="assets/img/commdity_list1.png" alt="test">
+                                </div>
+                                <h3 class="title">Redmi Note 11 5G</h3>
+                                <p class="desc">5000mAh大电量</p>
+                                <p class="price">1199元起</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="figure">
+                                    <img width="160" height="160" src="assets/img/commdity_list1.png" alt="test">
+                                </div>
+                                <h3 class="title">Redmi Note 11 5G</h3>
+                                <p class="desc">5000mAh大电量</p>
+                                <p class="price">1199元起</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="figure">
+                                    <img width="160" height="160" src="assets/img/commdity_list1.png" alt="test">
+                                </div>
+                                <h3 class="title">Redmi Note 11 5G</h3>
+                                <p class="desc">5000mAh大电量</p>
+                                <p class="price">1199元起</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="figure">
+                                    <img width="160" height="160" src="assets/img/commdity_list1.png" alt="test">
+                                </div>
+                                <h3 class="title">Redmi Note 11 5G</h3>
+                                <p class="desc">5000mAh大电量</p>
+                                <p class="price">1199元起</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="figure">
+                                    <img width="160" height="160" src="assets/img/commdity_list1.png" alt="test">
+                                </div>
+                                <h3 class="title">Redmi Note 11 5G</h3>
+                                <p class="desc">5000mAh大电量</p>
+                                <p class="price">1199元起</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="figure">
+                                    <img width="160" height="160" src="assets/img/commdity_list1.png" alt="test">
+                                </div>
+                                <h3 class="title">Redmi Note 11 5G</h3>
+                                <p class="desc">5000mAh大电量</p>
+                                <p class="price">1199元起</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="figure">
+                                    <img width="160" height="160" src="assets/img/commdity_list1.png" alt="test">
+                                </div>
+                                <h3 class="title">Redmi Note 11 5G</h3>
+                                <p class="desc">5000mAh大电量</p>
+                                <p class="price">1199元起</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="figure">
+                                    <img width="160" height="160" src="assets/img/commdity_list1.png" alt="test">
+                                </div>
+                                <h3 class="title">Redmi Note 11 5G</h3>
+                                <p class="desc">5000mAh大电量</p>
+                                <p class="price">1199元起</p>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
